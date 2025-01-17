@@ -16,7 +16,7 @@ from django.utils import translation
 
 from home.forms import SearchForm
 from home.models import Setting, ContactForm, ContactMessage,FAQ,About_Page,Contact_Page,Testimonial,Our_Team
-from Makaan_Hub import settings
+from rahejauniversalver_sovaisland import settings
 from utility.models import City,Locality,Residential_Property_Type
 from user.models import Developer
 from project.models import Commercial_Project_Images,Commercial_Project,Residential_Project,Residential_Project_Images

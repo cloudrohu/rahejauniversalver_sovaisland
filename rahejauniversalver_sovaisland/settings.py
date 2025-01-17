@@ -60,7 +60,7 @@ MIDDLEWARE = [
     "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
-ROOT_URLCONF = 'Makaan_Hub.urls'
+ROOT_URLCONF = 'rahejauniversalver_sovaisland.urls'
 
 TEMPLATES = [
     {
@@ -78,7 +78,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Makaan_Hub.wsgi.application'
+WSGI_APPLICATION = 'rahejauniversalver_sovaisland.wsgi.application'
 
 
 # Database

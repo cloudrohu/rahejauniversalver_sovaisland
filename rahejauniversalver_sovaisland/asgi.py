@@ -1,5 +1,5 @@
 """
-ASGI config for Makaan_Hub project.
+ASGI config for rahejauniversalver_sovaisland project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Makaan_Hub.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'rahejauniversalver_sovaisland.settings')
 
 application = get_asgi_application()

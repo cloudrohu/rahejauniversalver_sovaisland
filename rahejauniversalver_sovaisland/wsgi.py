@@ -1,5 +1,5 @@
 """
-WSGI config for Makaan_Hub project.
+WSGI config for rahejauniversalver_sovaisland project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Makaan_Hub.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'rahejauniversalver_sovaisland.settings')
 
 application = get_wsgi_application()
