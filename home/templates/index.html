@@ -1,0 +1,13 @@
+{% extends 'base/homebase.html' %}
+{% block header %} {% include 'base/header1.html' %} {% endblock %}
+
+
+{% for rs in setting %}
+
+{% block title %} {{ rs.title }} {% endblock %}
+{% block description %} {{ rs.description }} {% endblock %}
+{% block keywords %} {{ rs.keywords }} {% endblock %}
+
+{% endfor %}
+
+{% block body %} {% include 'content.html' %}  {% endblock %}
