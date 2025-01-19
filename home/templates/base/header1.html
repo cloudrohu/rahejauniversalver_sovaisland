@@ -24,11 +24,14 @@
             <!--Note: declare the Menu style in the data-menu-style="horizontal" (options: horizontal, vertical, accordion) -->
             
             <ul id="respMenu" class="ace-responsive-menu text-right" data-menu-style="horizontal">
-                <li><a href="/"><span class="title" style="color: {{rs.text_color}};">Home</span></a> </li>                  
-
+                <li><a href="/"><span class="title" style="color: {{rs.text_color}};">Home</span></a> </li>  
+                <li><a href="/"><span class="title" style="color: {{rs.text_color}};">About Project</span></a> </li>  
+                <li><a href="/"><span class="title" style="color: {{rs.text_color}};">Amenities</span></a> </li>  
+                <li><a href="/"><span class="title" style="color: {{rs.text_color}};">Configuration</span></a> </li>  
+                <li><a href="/"><span class="title" style="color: {{rs.text_color}};">Floor Plans</span></a> </li>  
+                <li><a href="/"><span class="title" style="color: {{rs.text_color}};">Gallery</span></a> </li>  
                 <li class="list-inline-item list_s"><a href="#" class="btn flaticon-user" data-toggle="modal" data-target=".bd-example-modal-lg"> <span class="dn-lg"></span></a></li>
-                <li class="list-inline-item add_listing home6"><a href="https://wa.me/+91{{rs.whatsapp}}"><span class="flaticon-plus"></span><span class="dn-lg"> Conect Now</span></a></li>
-
+                <li class="list-inline-item add_listing home6"><a href="https://wa.me/{{rs.whatsapp}}"><span class="flaticon-plus"></span><span class="dn-lg"> Conect Now</span></a></li>
             </ul>
         </nav>
         
@@ -184,8 +187,10 @@
     <div class="mobile-menu">
         <div class="header stylehome1">
             <div class="main_logo_home2 text-center">
-      <a href="/"><img class="nav_logo_img img-fluid mt20" style="height: 60px;" src="{{rs.logo.url}}" alt="makaanhub.png"></a>
+            <a href="/"><img class="nav_logo_img img-fluid mt20" style="height: 60px;" src="{{rs.logo.url}}" alt="makaanhub.png"></a>
             </div>
+
+
             <ul class="menu_bar_home2">
                 <li class="list-inline-item list_s"><a href="page-register.html"></a></li>
                 <li class="list-inline-item">
@@ -206,46 +211,28 @@
                 </li>
                 <li class="list-inline-item"><a class="mobile-menu-trigger" href="#menu"><img src="{% static '' %}main/images/dark-nav-icon.jpg" alt=""></a></a></li>
             </ul>
+
         </div>
     </div><!-- /.mobile-menu -->
     <nav id="menu" class="stylehome1">
         <ul>
-            <li style="background-color: {{rs.header_footer_color}}; ><a href="/"><span class="title" style="color: {{rs.text_color}}; ">Home</span></a> </li>  
+            <li style="background-color: {{rs.header_footer_color}}; ><a href="/"><span class="title" style="color: {{rs.text_color}}; "> Home</span></a> </li>  
+                          
                 <li style="background-color: {{rs.header_footer_color}}; >
-                    <a href="#"><span class="title" style="color: {{rs.text_color}};">New Projects</span></a>
-                    <ul>                       
-                        <li><a href="{% url "contactus" %}">Residetiol</a></li>
-                        <li><a href="{% url "aboutus" %}">Commercial</a></li>
-                    </ul>
-                </li>
-                <li style="background-color: {{rs.header_footer_color}}; >
-                    <a href="#"><span class="title" style="color: {{rs.text_color}};">Buy Property</span></a>
-                    <ul>                       
-                        <li><a href="{% url "contactus" %}">Residetiol</a></li>
-                        <li><a href="{% url "aboutus" %}">Commercial</a></li>
-                        
-                    </ul>
-                </li>
-                <li style="background-color: {{rs.header_footer_color}}; >
-                    <a href="#"><span class="title" style="color: {{rs.text_color}};">Rented Property</span></a>
-                    <ul>                       
-                        <li><a href="{% url "contactus" %}">Residetiol</a></li>
-                        <li><a href="{% url "aboutus" %}">Commercial</a></li>
-                    </ul>
-                </li>
-                
-                <li style="background-color: {{rs.header_footer_color}}; >
-                    <a href="#"><span class="title" style="color: {{rs.text_color}};">About & More</span></a>
+                    <a href="#"><span class="title" style="color: {{rs.text_color}};">About Project</span></a>
                     <ul>                       
                         <li><a href="{% url "contactus" %}">Contact</a></li>
                         <li><a href="{% url "aboutus" %}">About</a></li>
-                        <li><a href="{% url "blog" %}">Blog</a></li>
-                        <li><a href="{% url "aboutus" %}">Paying Guest</a></li>
+                        <li><a href="{% url "blog" %}">Amenities</a></li>
+                        <li><a href="{% url "blog" %}">Configuration</a></li>
+                        <li><a href="{% url "blog" %}">Floor Plans</a></li>
+                        <li><a href="{% url "blog" %}">Gallery</a></li>
+                        <li><a href="{% url "blog" %}">Location</a></li>
                     </ul>
-                </li>  
-            <li style="background-color: {{rs.header_footer_color}};><a href="page-login.html"><span class="flaticon-user"></span> Login</a></li>
-            <li><a href="page-register.html"><span class="flaticon-edit"></span> Register</a></li>
-            <li class="cl_btn"><a class="btn btn-block btn-lg btn-thm circle" href="https://wa.me/+91{{rs.whatsapp}}">Conect Now</a></li>
+                </li>             
+           
+            <li class="cl_btn"><a class="btn btn-block btn-lg btn-thm circle" href="https://wa.me/{{rs.whatsapp}}">Conect Now</a></li>
+        
         </ul>
     </nav>
 </div>
