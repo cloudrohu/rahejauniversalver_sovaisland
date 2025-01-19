@@ -15,7 +15,7 @@ from django.urls import reverse
 from django.utils import translation
 
 from home.forms import SearchForm
-from home.models import Setting, ContactForm, ContactMessage,FAQ,About_Page,Contact_Page,Testimonial,Our_Team,Slider
+from home.models import Setting, ContactForm, ContactMessage,FAQ,About_Page,Media, Contact_Page,Testimonial,Our_Team,Slider
 from rahejauniversalver_sovaisland import settings
 from utility.models import City,Locality,Residential_Property_Type
 from user.models import Developer
@@ -30,6 +30,7 @@ def index(request):
     city = City.objects.all()
     about = About_Page.objects.all().order_by('-id')[0:1]
 
+    media = Media.objects.filter(featured = 'True').order_by('-id')[:18]
     locality = Locality.objects.filter(featured_locality = 'True').order_by('-id')[:18]
     slider = Slider.objects.filter(featured_project = 'True').order_by('-id')[:9]
 
@@ -45,6 +46,7 @@ def index(request):
     context={
         'setting':setting,
         'slider':slider,
+        'media':media,
         'city':city,
         'about':about,
         'testimonial':testimonial,

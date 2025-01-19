@@ -58,3 +58,9 @@ class SliderAdmin(admin.ModelAdmin):
     list_display = ['title','image_tag','featured_project', 'create_at','update_at']
 
 admin.site.register(Slider,SliderAdmin)
+
+@admin_thumbnails.thumbnail('image')
+class MediaAdmin(admin.ModelAdmin):
+    list_display = ['title','image_tag','featured', 'create_at','update_at']
+
+admin.site.register(Media,MediaAdmin)
