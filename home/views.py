@@ -337,3 +337,27 @@ def project_detail(request,id,slug):
 def faq(request):
    
     return render(request, 'faq.html')
+
+
+def gallery(request):
+
+    setting = Setting.objects.all().order_by('-id')[0:1]
+    media = Media.objects.filter(featured = 'True').order_by('?')
+
+     # last 4 products
+    project_picked = Residential_Project.objects.all().order_by('?') #Random selected 4 products
+    project_featured = Residential_Project.objects.filter(featured_project = 'True').order_by('-id')[:9]  # last 4 products
+    Property_Type = Residential_Property_Type.objects.all().order_by('-id') # last 4 products
+
+    page="home"
+    context={
+        'setting':setting,
+        'media':media,
+        
+        'project_picked':project_picked,
+        'project_featured':project_featured,
+        'Property_Type':Property_Type,
+
+    }
+   
+    return render(request, 'gallery.html',context)

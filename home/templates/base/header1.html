@@ -3,10 +3,11 @@
 {% load static %}
 {% for rs in setting %}
 <header class="header-nav menu_style_home_one style2 style3 navbar-scrolltofixed stricky main-menu " style="background-color: {{rs.header_footer_color}}; ">
-    <div class="container p0">
+    <div class="container-fluid p0">
         <!-- Ace Responsive Menu -->
         
         <nav>
+            
             <!-- Menu Toggle btn-->
             <div class="menu-toggle">
                 <img class="nav_logo_img img-fluid" src="{{rs.logo.url}}" alt="makaanhub.png" style="height: 60px;">
@@ -16,6 +17,9 @@
                     <span class="icon-bar"></span>
                 </button>
             </div>
+            
+
+
             <a href="/" class="navbar_brand float-left dn-smd">
                 <img class="logo1 img-fluid" src="{{rs.logo.url}}" alt="makaanhub.png" style="height: 60px;">
                 <img class="logo2 img-fluid" src="{{rs.logo.url}}" alt="makaanhub.png" style="height: 60px;">
@@ -29,15 +33,59 @@
                 <li><a href="/"><span class="title" style="color: {{rs.text_color}};">Amenities</span></a> </li>  
                 <li><a href="/"><span class="title" style="color: {{rs.text_color}};">Configuration</span></a> </li>  
                 <li><a href="/"><span class="title" style="color: {{rs.text_color}};">Floor Plans</span></a> </li>  
-                <li><a href="/"><span class="title" style="color: {{rs.text_color}};">Gallery</span></a> </li>  
-                <li class="list-inline-item list_s"><a href="#" class="btn flaticon-user" data-toggle="modal" data-target=".bd-example-modal-lg"> <span class="dn-lg"></span></a></li>
+                <li><a href=" {% url "gallery" %} "><span class="title" style="color: {{rs.text_color}};">Gallery</span></a> </li>  
+                <li class="list-inline-item list_s"><a href="#" class="btn flaticon-user" data-toggle="modal" data-target=".bd-example-modal-lg"> <span class="dn-lg">Contect</span></a></li>
                 <li class="list-inline-item add_listing home6"><a href="https://wa.me/{{rs.whatsapp}}"><span class="flaticon-plus"></span><span class="dn-lg"> Conect Now</span></a></li>
             </ul>
+            <form class="d-flex">               
+
+                <!-- Modal -->
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Pre-Register here for Best offers
+                      </h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <main class="form-signin">
+                        <form action="/action_page.php">
+                          <label for="fname">First name:</label><br>
+                          <input type="text" id="fname" name="fname" value="John"><br>
+                          <label for="lname">Last name:</label><br>
+                          <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                          <input class="btn" type="submit" value="Submit">
+                        </form>
+                      </main>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </form>
         </nav>
         
     </div>
 </header>
 <!-- Modal -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        
+<script type="text/javascript">
+$(document).ready(function(){
+  $('#exampleModal').modal('show');
+});
+</script>
+
+
 <div class="sign_up_modal modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">

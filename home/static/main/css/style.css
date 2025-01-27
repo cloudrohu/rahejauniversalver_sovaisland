@@ -2979,7 +2979,7 @@ form.home5_advanced_search_form .form-group input.form-control::-ms-input-placeh
   margin-top: 0;
 }
 .home10-mainslider .banner-style-one .slide:before{
-  background-color: rgba(29, 41, 62, 0.6);
+  background-color: None;
   bottom: 0;
   content: "";
   left: 0;
@@ -3099,7 +3099,7 @@ form.home5_advanced_search_form .form-group input.form-control::-ms-input-placeh
 .listing_single_property_slider .owl-controls .owl-nav .owl-next {
   border: 1px solid #ffffff;
   border-radius: 8px;
-  color: #fff;
+  color: none;
   cursor: pointer;
   display: inline-block;
   font-size: 14px;
@@ -3149,7 +3149,7 @@ form.home5_advanced_search_form .form-group input.form-control::-ms-input-placeh
   background-size: cover;
 }
 .banner-style-one .slide:before{
-  background-color: rgba(0,0,0,.7);
+  background-color: none;
   bottom: 0;
   content: "";
   left: 0;
