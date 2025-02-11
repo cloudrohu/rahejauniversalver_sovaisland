@@ -1,26 +1,28 @@
 {% load static %}	
 
-<!-- Listing Single v5 Home Area -->
-	<div class="home10-mainslider">
-		<div class="container-fluid p0">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="main-banner-wrapper home10">
-					    <div class="banner-style-one owl-theme owl-carousel">
-						{% for rs in slider %}
-					        <div class="slide slide-one" style="background-image: url({{rs.image.url}});height: 600px;"></div>
-						{% endfor %}
-						</div>
-					    <div class="carousel-btn-block banner-carousel-btn">
-					        <span class="carousel-btn left-btn"><i class="flaticon-left-arrow-1 left"></i></span>
-					        <span class="carousel-btn right-btn"><i class="flaticon-right-arrow right"></i></span>
-					    </div><!-- /.carousel-btn-block banner-carousel-btn -->
-					</div><!-- /.main-banner-wrapper -->
-				</div>
-			</div>
-		</div>
-	</div>
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    
+    <div class="carousel-inner">
+        {% for rs in slider %}
+      <div class="carousel-item {% if forloop.first %}active{% endif %} ">
+        <img src="{{rs.image.url}}" style="height: 650px;" class="d-block w-100" alt="...">
+        
+      </div>
+      {% endfor %}
+      
 
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!--Crousel End-->
+  <br>
 	<section class="listing-title-area">
 	<div class="row">
 		<div class="container">
