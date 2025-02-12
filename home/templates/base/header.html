@@ -1,7 +1,12 @@
 <header>
+  {% load static %}
+{% for rs in setting %}
+  
 <nav class="navbar navbar-expand-lg navbar-light bg-light px-4 text-center  fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand fs-2" href="#" >Techno-<span class="text-primary">Web</span></a>
+      <div class="logo">
+        <a href="/" class="logo-image"><img src="{{rs.logo.url}}" style="height: 65px;width: 150px; padding: 2px;" alt="logo"></a>
+      </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -11,22 +16,24 @@
             <a class="nav-link active text-primary" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#services" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Services
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#services">SEO</a></li>
-              <li><a class="dropdown-item" href="#">Web design</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Graphics Design</a></li>
-            </ul>
+            <a class="nav-link" href="#about">Highlight</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#team">Our Team</a>
+            <a class="nav-link" href="#about">Floor Plans</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">Amenities</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">Location</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About Us</a>
+          </li>
+          
           <li class="nav-item">
             <a class="nav-link" href="#contact">Contect</a>
           </li>
@@ -35,6 +42,8 @@
       </div>
     </div>
   </nav>
+{% endfor %}
+
   <br><br>
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
      

@@ -14,7 +14,7 @@ class About_Page(models.Model):
     image = models.ImageField(upload_to='logo/')
     title = models.CharField(max_length=150)
     keywords = models.CharField(max_length=255)
-    description = models.CharField(max_length=255)
+    description = models.CharField(max_length=5000)
     mission = models.CharField(blank=True,max_length=2055)
     vision = models.CharField(blank=True,max_length=2000)
     values = models.CharField(blank=True,max_length=2055)
